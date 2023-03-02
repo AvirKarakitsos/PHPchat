@@ -25,22 +25,31 @@
     flex-direction: column;
     align-items: flex-start;
 }
+.auteur, .destin{
+    max-width: 55%;
+}
 .auteur{
     align-self: flex-end;
 }
 .para1{
-    background-color: rgb(97, 190, 233);
     border-radius: 10px 10px 0 10px;
     padding: 8px;
     margin: 3px 0;
     font-size: 14px;
     color: white;
 }
-.destin .para1{
-    background-color: rgb(150, 150, 150);
-}
 .para2{
     font-size: 11px;
     color: white;
 }
+.auteur .para1{
+    background-color: rgb(97, 190, 233);
+}
+.auteur .para2{
+    text-align: right;
+}
+.destin .para1{
+    background-color: rgb(150, 150, 150);
+}
+
 </style>

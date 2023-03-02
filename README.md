@@ -1,10 +1,10 @@
-#Chat
+## Chat
 
-Après s'être enregistré, vous pouvez envoyer des messages privés aux autres utilisateurs. Système de messagerie instantané avec jquery.
+Après s'être enregistré, vous pouvez envoyer des messages privés aux autres utilisateurs. Système de messagerie instantané avec *jquery*.
 
 ![Screenshot](https://github.com/AvirKarakitsos/PHPchat/blob/main/images/screenshot.png?raw=true)
 
-#Créer la base de données avec Mysql
+## Créer la base de données avec Mysql
 
 CREATE DATABASE php_chatmp;
 

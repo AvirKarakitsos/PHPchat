@@ -1,5 +1,8 @@
-username: arno, mdp: arno
-username: bot, mdp: bot
+#Chat
+
+Après s'être enregistré, vous pouvez envoyer des messages privés aux autres utilisateurs. Système de messagerie instantané avec jquery.
+
+#Créer la base de données avec Mysql
 
 CREATE DATABASE php_chatmp;
 

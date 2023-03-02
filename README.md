@@ -15,6 +15,7 @@ CREATE Table messages(
     texte TEXT,
     created_at TIMESTAMP
 );
+
 CREATE Table users(
     id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
     pseudo VARCHAR(250),

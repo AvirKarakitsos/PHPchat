@@ -1,8 +1,13 @@
 ## Chat
 
-Après s'être enregistré, vous pouvez envoyer des messages privés aux autres utilisateurs. Système de messagerie instantané avec *jquery*.
+Après s'être enregistré, vous pouvez envoyer des messages privés aux autres utilisateurs. Système de messagerie instantané avec *jquery*. 
+Avec une architecture MVC.
 
 ![Screenshot](https://github.com/AvirKarakitsos/PHPchat/blob/main/images/screenshot.png?raw=true)
+
+sources: 
+    FrenchCoder - Développement Web https://www.youtube.com/watch?v=glU80K8gL_c
+    Nord Coders https://www.youtube.com/watch?v=CX2kAJjjDNM
 
 ## Créer la base de données avec Mysql
 

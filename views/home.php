@@ -1,8 +1,7 @@
-<header>
-    <h1>Welcome <?= $params['pseudo']->pseudo?> </h1>  
-</header>
+<main>
+    <h2>Welcome <?= $params['pseudo']->pseudo?></h2>  
 
-<section>
+    <section class="main-part">
     <ul>
         <?php foreach($params['result'] as $user){ 
             if($user->id !== $params['pseudo']->id){?>
@@ -12,20 +11,26 @@
         <?php } 
         }?>
     </ul>
-</section>
+    </section>
 
-<div>
-    <button><a href="/logout">Déconnexion</a></button>
-</div>
+    <button class="btn-logout"><a href="/logout">Déconnexion</a></button>
+
+</main>
 
 <style scoped>
-    section{
+    h2 {
+        text-align: center;
+    }
+
+    section {
         font-size: 1.5rem;
     }
-    section > ul > li > a{
+
+    section > ul > li > a {
         color: white;
     }
-    div{
+
+    .btn-logout {
         width:320px;
         margin: 0 auto;
         text-align: center;

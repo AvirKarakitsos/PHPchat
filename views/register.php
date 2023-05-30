@@ -1,31 +1,28 @@
 
-<?php if(isset($_SESSION['error'])){ ?>
-    <div>
-        <?= $_SESSION['error'];
-}?>
-    </div>
-    
-<h2>Créer un compte</h2>
+<main>
+    <?php if(isset($_SESSION['error'])){ ?>
+        <div>
+            <?= $_SESSION['error'];
+    }?>
+        </div>
+        
+    <p class="subtitle">Créer un compte</p>
 
-<form method="POST" action="/register">
-    <label for="pseudo" ></label>
-    <input type="text" name="pseudo" placeholder="Pseudo" autocomplete="off"/>
-    <input type="password" name="password" placeholder="Mot de passe" autocomplete="off"/>
+    <form method="POST" action="/register">
+        <label for="pseudo" ></label>
+        <input type="text" name="pseudo" placeholder="Pseudo" autocomplete="off"/>
+        <input type="password" name="password" placeholder="Mot de passe" autocomplete="off"/>
 
-    <button type="submit" name="valider">Valider</button>
+        <button type="submit" name="valider">Valider</button>
+    </form>
 
     <div>
         <p>Déjà un compte?</p>
         <a href="/login">se connecter</a>
     </div>
-</form>
-
+</main>
 
 <style scoped>
-    h2{
-        margin: 15px 0;
-        text-align: center;
-    }
     div{
         text-align: center;
         color: red;

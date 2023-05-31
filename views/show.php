@@ -1,45 +1,45 @@
 
-<div>
-    <h2>Compte : <?= $params['result']['user1']->pseudo ?></h2>
-    <h3><?= "à ".$params['result']['user2']->pseudo;?></h3>
-</div>
+<main class="rg-25">
 
-<section class="main-part" id="messages">
-<?php if(!empty($params['result']['messages'])){
-    foreach($params['result']['messages'] as $message){
+    <h2>Compte : <?= $params['result']['user1']->pseudo." à ".$params['result']['user2']->pseudo;?></h2>
 
-        $toggle = $message->id_auteur === $params['result']['user1']->id ? "author" : "recipient";?> 
+    <section class="flex-column main-part" id="messages">
+    <?php if(!empty($params['result']['messages'])){
+        foreach($params['result']['messages'] as $message){
 
-        <ul class=<?= $toggle; ?>>
-            <li class="message-part"><?= $message->texte;?></li>
-            <li class="date-part"><?= date('F j',strtotime($message->created_at))." at ".date('H:i',strtotime($message->created_at));?></li>
-        </ul>
-    <?php
+            $toggle = $message->id_auteur === $params['result']['user1']->id ? "author" : "recipient";?> 
+
+            <ul class=<?= $toggle; ?>>
+                <li class="message-part"><?= $message->texte;?></li>
+                <li class="date-part"><?= date('F j',strtotime($message->created_at))." at ".date('H:i',strtotime($message->created_at));?></li>
+            </ul>
+        <?php
+        }
+    }else{
+        ?>
+            <p>
+                <?= "pas de messages";?>
+            </p>
+        <?php
     }
-}else{
     ?>
-        <p>
-            <?= "pas de messages";?>
-        </p>
-    <?php
-}
-?>
-</section>
+    </section>
 
-<div class="form-send">
-    <form class="form" method="POST" action="/store">
+    <form class="flex-row form" method="POST" action="/store">
         <textarea name="message" class="area" placeholder="New message..." required></textarea>
         <button type="submit" name="envoyer">
             <i class="fas fa-chevron-circle-right send"></i>
         </button> 
     </form>
 
-    <button class="btn"><a href="/logout">Deconnexion</a></button>        
-    <button class="btn"><a href="/users">Retour</a></button>
-</div>
+    <div class="flex-row column-gap">
+        <button class="btn"><a class="no-decoration color-white" href="/logout">Deconnexion</a></button>        
+        <button class="btn"><a class="no-decoration color-white" href="/users">Retour</a></button>
+    </div>
+</main>
 
-<script>
-    const message = document.getElementById('messages');
+<!-- <script> -->
+    <!-- const message = document.getElementById('messages');
     let compteur = 0;
 
     setInterval(load_chat, 1000);
@@ -51,16 +51,15 @@
 
         $('#messages').load(`/userslive`)
 
-    } 
-</script>
+    }  -->
+<!-- </script> -->
 
 <style scoped>
     
-#messages{
-    display: flex;
-    flex-direction: column;
+#messages {
     align-items: flex-start;
 }
+
 .author, .recipient{
     max-width: 55%;
 }
@@ -93,10 +92,11 @@
     margin: 0 auto;
     text-align: center;
 }
+
 .form {
-    display: flex;
     justify-content: space-around;
 }
+
 .form > button {
     background: transparent;
 }
@@ -115,5 +115,9 @@
     font-size: 30px;
     color: rgb(97, 190, 233);
     cursor: pointer;
+}
+
+.column-gap{
+    column-gap: 15px;
 }
 </style>

@@ -1,5 +1,5 @@
 
-<img src="../images/phplogo.png" alt="erreur"/>
+<img src="../images/phplogo.png" alt="logo php"/>
 <h1>Messagerie privée avec PHP</h1>
 
 <style scoped>

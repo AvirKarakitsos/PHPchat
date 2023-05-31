@@ -46,7 +46,7 @@ class SiteController extends Controller
         $request = new User();
         $result = $request->all();
 
-        return $this->view('home',compact('pseudo','result'));
+        return $this->view('dashboard',compact('pseudo','result'));
     }
 
     public function show(int $id)

@@ -1,8 +1,8 @@
 
-<main>  
+<main class="rg-50">  
     <h2 class="subtitle">Créer un compte</h2>
 
-    <form class="home-form" method="POST" action="/register">
+    <form class="flex-column home-form" method="POST" action="/register">
         <input type="text" name="pseudo" placeholder="Pseudo" autocomplete="off"/>
         <input type="password" name="password" placeholder="Mot de passe" autocomplete="off"/>
 
@@ -15,7 +15,7 @@
     }?>
         </div>
     
-    <div class="register">
+    <div class="flex-row register">
         <p>Déjà un compte?</p>
         <a class="color-white" href="/login">se connecter</a>
     </div>

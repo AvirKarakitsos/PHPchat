@@ -75,16 +75,20 @@
     margin: 3px 0;
     color: var(--primary);
 }
+
 .date-part{
     font-size: 1rem;
     color: var(--primary);
 }
+
 .author .date-part{
     text-align: right;
 }
+
 .author .message-part{
     background-color: var(--card);
 }
+
 .recipient .message-part{
     background-color: var(--secondary);
 }
@@ -115,7 +119,7 @@
 }
 
 .send {
-    font-size: 2.3rem;
+    font-size: 3.5rem;
     color: var(--card);
     cursor: pointer;
 }

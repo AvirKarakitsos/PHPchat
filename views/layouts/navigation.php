@@ -1,9 +1,10 @@
 
-<img src="../images/phplogo.png" alt="logo php"/>
+<i class="fa-brands fa-php"></i>
 <h1>Messagerie privée avec PHP</h1>
 
 <style scoped>
-    img{
-        height: 2.5rem;
+    .fa-php{
+        font-size: 5rem;
+        color: var(--card);
     }
 </style>

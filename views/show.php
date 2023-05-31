@@ -27,12 +27,13 @@
 
     <form class="flex-row form" method="POST" action="/store">
         <textarea name="message" class="area" placeholder="Nouveau message..." required></textarea>
-        <button class="btn-valid" type="submit" name="envoyer">
+        <button class="btn-valid flex-row flex-center" type="submit" name="envoyer">
             <i class="fas fa-chevron-circle-right send"></i>
-        </button> 
+        </button>
+        <i class="fa-sharp fa-solid fa-circle-caret-right"></i>
     </form>
 
-    <div class="flex-row column-gap">
+    <div class="flex-row cg-15">
         <button class="btn"><a class="no-decoration color-white" href="/logout">Deconnexion</a></button>        
         <button class="btn"><a class="no-decoration color-white" href="/users">Retour</a></button>
     </div>
@@ -72,11 +73,10 @@
     border-radius: 10px 10px 0 10px;
     padding: 8px;
     margin: 3px 0;
-    font-size: .9rem;
     color: var(--primary);
 }
 .date-part{
-    font-size: .7rem;
+    font-size: 1rem;
     color: var(--primary);
 }
 .author .date-part{
@@ -90,13 +90,10 @@
 }
 
 .form {
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     justify-content: space-around;
     align-items: center;
-}
-
-.form > button {
-    background: transparent;
 }
 
 .area {
@@ -108,13 +105,12 @@
     border: 0;
     border-radius: 15px;
     outline: none;
-    font-size: .9rem;
+    font-size: 1.6rem;
 }
 
 .btn-valid {
     height: 2.3rem;
     width: 2.3rem;
-    border: none;
     border-radius: 50%;
 }
 
@@ -122,9 +118,5 @@
     font-size: 2.3rem;
     color: var(--card);
     cursor: pointer;
-}
-
-.column-gap{
-    column-gap: 15px;
 }
 </style>

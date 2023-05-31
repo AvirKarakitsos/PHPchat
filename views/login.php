@@ -1,8 +1,8 @@
 
-<main class="rg-50">
+<main class="rg-25">
     <h2>Se connecter</h2>
 
-    <form class="flex-column home-form" method="POST" action="/users">
+    <form class="flex-column home-form rg-25" method="POST" action="/users">
         <input type="text" name="pseudo" placeholder="Pseudo" autocomplete="off"/>
         <input type="password" name="password" placeholder="Mot de passe" autocomplete="off"/>
 
@@ -10,12 +10,12 @@
     </form>
 
     <?php if(isset($_SESSION['error'])){ ?>
-        <div class="error">
+        <p class="error">
             <?= $_SESSION['error'];
     }?>
-        </div>
+        </p>
     
-    <div class="flex-row register">
+    <div class="flex-row cg-15 flex-center">
         <p>Pas de compte?</p>
         <a class="color-white" href="/register">s'enregistrer</a>
     </div>

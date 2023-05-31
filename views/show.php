@@ -5,17 +5,17 @@
 
     <section class="flex-column main-part" id="messages">
     <?php if(!empty($params['result']['messages'])){
-        foreach($params['result']['messages'] as $message){
+            foreach($params['result']['messages'] as $message){
 
-            $toggle = $message->id_auteur === $params['result']['user1']->id ? "author" : "recipient";?> 
+                $toggle = $message->id_auteur === $params['result']['user1']->id ? "author" : "recipient";?> 
 
-            <ul class=<?= $toggle; ?>>
-                <li class="message-part"><?= $message->texte;?></li>
-                <li class="date-part"><?= date('F j',strtotime($message->created_at))." at ".date('H:i',strtotime($message->created_at));?></li>
-            </ul>
-        <?php
-        }
-    }else{
+                <ul class=<?= $toggle; ?>>
+                    <li class="message-part"><?= $message->texte;?></li>
+                    <li class="date-part"><?= date('F j',strtotime($message->created_at))." at ".date('H:i',strtotime($message->created_at));?></li>
+                </ul>
+            <?php
+            }
+        }else{
         ?>
             <p>
                 <?= "pas de messages";?>
@@ -26,8 +26,8 @@
     </section>
 
     <form class="flex-row form" method="POST" action="/store">
-        <textarea name="message" class="area" placeholder="New message..." required></textarea>
-        <button type="submit" name="envoyer">
+        <textarea name="message" class="area" placeholder="Nouveau message..." required></textarea>
+        <button class="btn" type="submit" name="envoyer">
             <i class="fas fa-chevron-circle-right send"></i>
         </button> 
     </form>
@@ -38,8 +38,8 @@
     </div>
 </main>
 
-<!-- <script> -->
-    <!-- const message = document.getElementById('messages');
+<script>
+    const message = document.getElementById('messages');
     let compteur = 0;
 
     setInterval(load_chat, 1000);
@@ -51,11 +51,10 @@
 
         $('#messages').load(`/userslive`)
 
-    }  -->
-<!-- </script> -->
+    } 
+</script>
 
 <style scoped>
-    
 #messages {
     align-items: flex-start;
 }
@@ -71,20 +70,20 @@
     padding: 8px;
     margin: 3px 0;
     font-size: 14px;
-    color: white;
+    color: var(--primary);
 }
 .date-part{
     font-size: 11px;
-    color: white;
+    color: var(--primary);
 }
 .author .date-part{
     text-align: right;
 }
 .author .message-part{
-    background-color: rgb(97, 190, 233);
+    background-color: var(--card);
 }
 .recipient .message-part{
-    background-color: rgb(150, 150, 150);
+    background-color: var(--secondary);
 }
 
 .form-send {
@@ -105,15 +104,17 @@
     width:250px; 
     height:50;
     padding: 10px;
-    background-color: rgb(50, 50, 50);
-    border:2px solid rgb(97, 190, 233);
+    color: var(--primary);
+    background-color: var(--hover);
+    border: 0;
     border-radius: 15px;
+    outline: none;
     font-size: 14px;
-    color: white;
 }
+
 .send {
     font-size: 30px;
-    color: rgb(97, 190, 233);
+    color: var(--card);
     cursor: pointer;
 }
 

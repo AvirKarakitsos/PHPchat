@@ -1,31 +1,29 @@
 
 <?php if(!empty($params['result']['messages'])){
-    foreach($params['result']['messages'] as $message){
+            foreach($params['result']['messages'] as $message){
 
-        $toggle = $message->id_auteur === $params['result']['user1']->id ? "author" : "recipient";?> 
+                $toggle = $message->id_auteur === $params['result']['user1']->id ? "author" : "recipient";?> 
 
-        <div class=<?= $toggle; ?>>
-            <p class="message-part"><?= $message->texte;?></p>
-            <p class="date-part"><?= date('F j',strtotime($message->created_at))." at ".date('H:i',strtotime($message->created_at));?></p>
-        </div>
-    <?php
+                <ul class=<?= $toggle; ?>>
+                    <li class="message-part"><?= $message->texte;?></li>
+                    <li class="date-part"><?= date('F j',strtotime($message->created_at))." at ".date('H:i',strtotime($message->created_at));?></li>
+                </ul>
+            <?php
+            }
+        }else{
+        ?>
+            <p>
+                <?= "pas de messages";?>
+            </p>
+        <?php
     }
-}else{
-    ?>
-        <p>
-            <?= "pas de messages";?>
-    </p>
-    <?php
-}
 ?>
  
 <style scoped>
-    
-#messages{
-display: flex;
-flex-direction: column;
-align-items: flex-start;
+#messages {
+    align-items: flex-start;
 }
+
 .author, .recipient{
     max-width: 55%;
 }
@@ -37,19 +35,19 @@ align-items: flex-start;
     padding: 8px;
     margin: 3px 0;
     font-size: 14px;
-    color: white;
+    color: var(--primary);
 }
 .date-part{
     font-size: 11px;
-    color: white;
+    color: var(--primary);
 }
 .author .date-part{
     text-align: right;
 }
 .author .message-part{
-    background-color: rgb(97, 190, 233);
+    background-color: var(--card);
 }
 .recipient .message-part{
-    background-color: rgb(150, 150, 150);
+    background-color: var(--secondary);
 }
 </style>

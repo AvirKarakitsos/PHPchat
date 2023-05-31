@@ -1,5 +1,5 @@
 
-<main class="home-page">
+<main>
     <h2>Se connecter</h2>
 
     <form class="home-form" method="POST" action="/users">

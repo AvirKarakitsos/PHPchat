@@ -38,9 +38,11 @@ header {
 }
 
 main {
+    margin: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    row-gap: 50px;
 }
 
 .main-part {
@@ -67,11 +69,6 @@ main {
 }
 
     /* Home Pages */
-.home-page {
-    margin: 25px;
-    row-gap: 50px;
-}
-
 .home-form {
     width: 300px;
     display: flex;
@@ -84,6 +81,7 @@ main {
     height: 2.2rem;
     padding: 10px;
     font-size: 1rem;
+    outline: none;
 }
 
 .error {

@@ -11,6 +11,8 @@
     --card: #1DA1F2;
     --primary: #E4E6EB;
     --secondary: #B0B3B8;
+
+    font-size: 16px;
 }
 
 /* common tags */
@@ -36,7 +38,7 @@ main {
 }
 
 h1 {
-    font-size: 18px;
+    font-size: 1.1rem;
 }
 
 ul {
@@ -69,6 +71,10 @@ ul {
 
 .rg-25 {
     row-gap: 25px;
+}
+
+.rg-3 {
+    row-gap: 3px;
 }
 
 .main-part {

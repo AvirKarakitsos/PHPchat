@@ -3,7 +3,7 @@
 
     <h2>Compte : <?= $params['result']['user1']->pseudo." à ".$params['result']['user2']->pseudo;?></h2>
 
-    <section class="flex-column main-part" id="messages">
+    <section class="flex-column rg-3 main-part" id="messages">
     <?php if(!empty($params['result']['messages'])){
             foreach($params['result']['messages'] as $message){
 
@@ -27,7 +27,7 @@
 
     <form class="flex-row form" method="POST" action="/store">
         <textarea name="message" class="area" placeholder="Nouveau message..." required></textarea>
-        <button class="btn" type="submit" name="envoyer">
+        <button class="btn-valid" type="submit" name="envoyer">
             <i class="fas fa-chevron-circle-right send"></i>
         </button> 
     </form>
@@ -60,21 +60,23 @@
     align-items: flex-start;
 }
 
-.author, .recipient{
+.author, .recipient {
     max-width: 55%;
 }
-.author{
+
+.author {
     align-self: flex-end;
 }
+
 .message-part{
     border-radius: 10px 10px 0 10px;
     padding: 8px;
     margin: 3px 0;
-    font-size: 14px;
+    font-size: .9rem;
     color: var(--primary);
 }
 .date-part{
-    font-size: 11px;
+    font-size: .7rem;
     color: var(--primary);
 }
 .author .date-part{
@@ -87,14 +89,10 @@
     background-color: var(--secondary);
 }
 
-.form-send {
-    width: 350px;
-    margin: 0 auto;
-    text-align: center;
-}
-
 .form {
+    width: 350px;
     justify-content: space-around;
+    align-items: center;
 }
 
 .form > button {
@@ -110,11 +108,18 @@
     border: 0;
     border-radius: 15px;
     outline: none;
-    font-size: 14px;
+    font-size: .9rem;
+}
+
+.btn-valid {
+    height: 2.3rem;
+    width: 2.3rem;
+    border: none;
+    border-radius: 50%;
 }
 
 .send {
-    font-size: 30px;
+    font-size: 2.3rem;
     color: var(--card);
     cursor: pointer;
 }

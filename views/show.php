@@ -43,13 +43,14 @@
     let compteur = 0;
 
     setInterval(load_chat, 1000);
+    
     function load_chat(){
         if(compteur !== message.childNodes.length){
             message.scrollTop = message.scrollHeight;
             compteur = message.childNodes.length;
         }
 
-        $('#messages').load(`/userslive`)
+        $('#messages').load('/userslive')
 
     } 
 </script>

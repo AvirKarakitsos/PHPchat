@@ -35,6 +35,10 @@ main {
     align-items: center;
 }
 
+h1 {
+    font-size: 18px;
+}
+
 ul {
     list-style-type: none;
 }

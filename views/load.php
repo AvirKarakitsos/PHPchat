@@ -19,35 +19,3 @@
     }
 ?>
  
-<style scoped>
-#messages {
-    align-items: flex-start;
-}
-
-.author, .recipient{
-    max-width: 55%;
-}
-.author{
-    align-self: flex-end;
-}
-.message-part{
-    border-radius: 10px 10px 0 10px;
-    padding: 8px;
-    margin: 3px 0;
-    font-size: 14px;
-    color: var(--primary);
-}
-.date-part{
-    font-size: 11px;
-    color: var(--primary);
-}
-.author .date-part{
-    text-align: right;
-}
-.author .message-part{
-    background-color: var(--card);
-}
-.recipient .message-part{
-    background-color: var(--secondary);
-}
-</style>

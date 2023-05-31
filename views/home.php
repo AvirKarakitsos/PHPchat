@@ -1,38 +1,22 @@
 <main>
     <h2>Welcome <?= $params['pseudo']->pseudo?></h2>  
 
-    <section class="main-part">
-    <ul>
+    <ul class="main-part fs">
         <?php foreach($params['result'] as $user){ 
             if($user->id !== $params['pseudo']->id){?>
 
-            <li> <a href="/users/<?= $user->id?>"> <?= $user->pseudo ?> </a></li>
+            <li> <a class="no-decoration color-white" href="/users/<?= $user->id?>"> <?= $user->pseudo ?> </a></li>
 
         <?php } 
         }?>
     </ul>
-    </section>
 
-    <button class="btn-logout"><a href="/logout">Déconnexion</a></button>
+    <button class="btn"><a href="/logout">Déconnexion</a></button>
 
 </main>
 
 <style scoped>
-    h2 {
-        text-align: center;
-    }
-
-    section {
+    .fs {
         font-size: 1.5rem;
-    }
-
-    section > ul > li > a {
-        color: white;
-    }
-
-    .btn-logout {
-        width:320px;
-        margin: 0 auto;
-        text-align: center;
     }
 </style>

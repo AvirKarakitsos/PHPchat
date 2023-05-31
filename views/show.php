@@ -10,10 +10,10 @@
 
         $toggle = $message->id_auteur === $params['result']['user1']->id ? "author" : "recipient";?> 
 
-        <div class=<?= $toggle; ?>>
-            <p class="message-part"><?= $message->texte;?></p>
-            <p class="date-part"><?= date('F j',strtotime($message->created_at))." at ".date('H:i',strtotime($message->created_at));?></p>
-        </div>
+        <ul class=<?= $toggle; ?>>
+            <li class="message-part"><?= $message->texte;?></li>
+            <li class="date-part"><?= date('F j',strtotime($message->created_at))." at ".date('H:i',strtotime($message->created_at));?></li>
+        </ul>
     <?php
     }
 }else{
@@ -116,8 +116,4 @@
     color: rgb(97, 190, 233);
     cursor: pointer;
 }
-.btn {
-    margin: 10px 5px;
-}
-
 </style>

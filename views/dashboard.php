@@ -5,7 +5,7 @@
         <?php foreach($params['result'] as $user){ 
             if($user->id !== $params['pseudo']->id){?>
 
-            <li><a class="color-white" href="/users/<?= $user->id?>"> <?= $user->pseudo ?> </a></li>
+            <li><a class="color-white fs-large" href="/users/<?= $user->id?>"> <?= $user->pseudo ?> </a></li>
 
         <?php } 
         }?>

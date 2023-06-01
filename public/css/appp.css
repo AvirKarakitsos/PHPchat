@@ -18,7 +18,7 @@
 /* common tags */
 body {
     font-family: sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 }
 
 header {
@@ -131,6 +131,11 @@ ul {
 
 .error {
     color: red;
+}
+    /* Dashboard */
+
+.fs-large {
+    font-size: 2rem;
 }
 
 @media screen and (min-width:750px) {

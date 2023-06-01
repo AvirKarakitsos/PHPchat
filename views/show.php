@@ -62,6 +62,7 @@
 }
 
 .author, .recipient {
+    font-size: 1.5rem;
     max-width: 55%;
 }
 

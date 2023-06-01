@@ -5,7 +5,7 @@ Avec une architecture MVC.
 
 **Tags**: *PHP v.8.3.1, MVC, register, login, MySQL, jQuery*
 
-![Screenshot](https://github.com/AvirKarakitsos/PHPchat/blob/main/images/php-chat.png?raw=true)
+![Screenshot](https://github.com/AvirKarakitsos/PHPchat/blob/main/public/images/php-chat.png?raw=true)
 
 sources: 
     FrenchCoder - Développement Web https://www.youtube.com/watch?v=glU80K8gL_c

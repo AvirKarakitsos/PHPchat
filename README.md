@@ -3,7 +3,7 @@
 Après s'être enregistré, vous pouvez envoyer des messages privés aux autres utilisateurs. Système de messagerie instantané avec *jquery*. 
 Avec une architecture MVC.
 
-**Tags**: *PHP v.8.3.1, MVC, register, login, MySQL, jQuery*
+**Tags**: *PHP v.8.3.1, MVC, register, login, MySQL, jQuery, first mobile (responsive)*
 
 ![Screenshot](https://github.com/AvirKarakitsos/PHPchat/blob/main/public/images/php-chat.png?raw=true)
 
